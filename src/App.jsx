@@ -1,10 +1,12 @@
 import GlobalStyle from "./components/GlobalStyle";
+import { TopMenu } from "./components/TopMenu";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <h1>Hello World!</h1>
+
+      <TopMenu />
     </>
   );
 }
