@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { primaryColor, secondaryColor, lightText, darkText } from "./variables";
 import logoUrl from "../../assets/images/logo_24.svg";
-import backgroundTexture from "../../assets/images/background-textura.jpg";
 
 export const StyledHeader = styled.header`
   align-items: center;
@@ -90,8 +89,7 @@ export const StyledContainer = styled.div`
 
   display: flex;
 
-  flex-direction: ${({ containerDirection }) =>
-    containerDirection ? containerDirection : "row"};
+  flex-direction: ${({ containerDirection }) => containerDirection || "row"};
 
   gap: ${({ gapValue }) => (gapValue ? gapValue : "0")};
 
@@ -100,25 +98,12 @@ export const StyledContainer = styled.div`
   justify-content: ${({ justifyContent }) =>
     justifyContent ? justifyContent : "flex-start"};
 
-  padding: 1rem;
+  padding: ${({ padding }) => padding || "1rem"};
 
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${backgroundTexture});
-    background-repeat: repeat; /* Repetir a imagem se necessário */
-    z-index: -1;
-  }
-
   @media screen and (min-width: 768px) {
-    padding: 2rem;
+    padding: ${({ padding }) => (padding ? 2 * padding : "2rem")};
   }
 `;
 
@@ -148,9 +133,27 @@ export const StyledListItem = styled.li`
   }
   @media screen and (min-width: 1024px) {
     :hover {
-      color: ${({ hoverColor }) => (hoverColor ? hoverColor : "inherit")};
+      color: ${({ hoverColor }) => hoverColor || "inherit"};
       font-size: 1.025rem;
       text-decoration: underline;
     }
   }
+`;
+
+export const StyledTitle = styled.h1`
+  color: ${({ color }) => color || darkText};
+`;
+
+export const StyledSubtitle = styled.h2`
+  color: ${({ color }) => color || darkText};
+`;
+
+export const StyledH3 = styled.h3`
+  color: ${({ color }) => color || darkText};
+`;
+
+export const StyledParagraph = styled.p`
+  color: ${({ color }) => color || darkText};
+  font-size: ${({ fontSize }) => fontSize || "1.25rem"};
+  text-align: ${({ textAlign }) => textAlign || "justify"};
 `;
