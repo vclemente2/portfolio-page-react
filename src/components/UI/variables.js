@@ -5,4 +5,9 @@ export const highlightColor = "#FF6B6B";
 export const alternativeHighlightColor = " #00C853";
 export const accentColor = "#FFD166";
 
-export const backgroundColor = "#F8F9FA";
+export const backgroundDefault = "#F8F9FA";
+
+export const lightText = backgroundDefault;
+export const darkText = secondaryColor;
+
+export const font = `"Montserrat", sans-serif`;

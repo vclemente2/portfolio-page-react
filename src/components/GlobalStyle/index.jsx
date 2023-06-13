@@ -1,12 +1,16 @@
 import { createGlobalStyle } from "styled-components";
-import { backgroundColor, secondaryColor } from "../UI/variables";
+import { backgroundDefault, darkText, font } from "../UI/variables";
 
 const GlobalStyle = createGlobalStyle`
+:root{
+    font-size: 16px;
+    line-height: 1.2
+}
+
 *   {
-    background: ${backgroundColor};
     box-sizing: border-box;
-    color: ${secondaryColor};
-    font-family: "Montserrat", sans-serif;
+    color: inherit;
+    font-family: ${font};
     list-style: none;
     margin: 0;
     padding: 0;
@@ -14,9 +18,17 @@ const GlobalStyle = createGlobalStyle`
 }
  
 body {
+    background: ${backgroundDefault};
+    color: ${darkText};
     margin:auto;
-    max-width: 1440px;
+    max-width: 1920px;
 } 
+
+@media screen and (min-width: 1440px){
+:root{
+        font-size:24px;
+    }
+}
 `;
 
 export default GlobalStyle;
