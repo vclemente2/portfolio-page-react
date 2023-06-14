@@ -1,29 +1,32 @@
 import { StyledContainer, StyledH3 } from "../UI";
-import { DiReact } from "react-icons/di";
 import { IconContext } from "react-icons";
 
-export function SkillCard() {
+export function SkillCard({ children, icon, iconColor, iconSize }) {
   return (
     <StyledContainer
       widthValue={() =>
         window.innerWidth >= 1024
-          ? "15vw"
+          ? "13.5vw"
           : window.innerWidth >= 768
           ? "30vw"
           : "40vw"
       }
       heightValue={() =>
         window.innerWidth >= 1024
-          ? "15vw"
+          ? "13.5vw"
           : window.innerWidth >= 768
           ? "30vw"
           : "40vw"
       }
-      padding="0.5rem"
+      padding="1rem"
+      containerDirection="column"
+      justifyContent="flex-end"
+      gapValue=".5rem"
+      marginValue="1rem 0.5rem"
     >
-      <StyledH3>React</StyledH3>
-      <IconContext.Provider value={{ color: "blue", size: "2.5rem" }}>
-        <DiReact />
+      <IconContext.Provider value={{ color: iconColor, size: iconSize }}>
+        {icon}
+        <StyledH3>{children}</StyledH3>
       </IconContext.Provider>
     </StyledContainer>
   );

@@ -3,11 +3,12 @@ import { StyledContainer, StyledParagraph, StyledSubtitle } from "../UI";
 export function AboutMe() {
   return (
     <StyledContainer
+      id="sobre"
       containerDirection="column"
       gapValue="1rem"
       widthValue={() => (window.innerWidth >= 768 ? "60vw" : "100%")}
     >
-      <StyledSubtitle id="sobre">Sobre Mim</StyledSubtitle>
+      <StyledSubtitle>Sobre Mim</StyledSubtitle>
       <StyledParagraph>
         Apaixonado por tecnologia e todo seu potencial de transformação. Fiz
         minha transição de carreira de Engenheiro Civil para Desenvolvedor de

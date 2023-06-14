@@ -88,7 +88,10 @@ export function Overview() {
         </StyledList>
       </StyledContainer>
 
-      <StyledImg src="https://github.com/vclemente2.png" />
+      <StyledImg
+        src="https://github.com/vclemente2.png"
+        alt="Foto Vinicius Bastos"
+      />
     </StyledContainer>
   );
 }

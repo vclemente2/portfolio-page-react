@@ -97,20 +97,22 @@ export const StyledContainer = styled.div`
 
   flex-direction: ${({ containerDirection }) => containerDirection || "row"};
 
-  gap: ${({ gapValue }) => (gapValue ? gapValue : "0")};
+  flex-wrap: wrap;
 
-  width: ${({ widthValue }) => (widthValue ? widthValue : "100%")};
+  gap: ${({ gapValue }) => (gapValue ? gapValue : "0")};
 
   height: ${({ heightValue }) => heightValue || "fit-content"};
 
   justify-content: ${({ justifyContent }) =>
     justifyContent ? justifyContent : "flex-start"};
 
+  margin: ${({ marginValue }) => marginValue || "0px"};
+
   padding: ${({ padding }) => padding || "1rem"};
 
   position: relative;
 
-  flex-wrap: wrap;
+  width: ${({ widthValue }) => (widthValue ? widthValue : "100%")};
 
   @media screen and (min-width: 768px) {
     padding: ${({ padding }) => (padding ? 2 * padding : "2rem")};
