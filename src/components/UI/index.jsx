@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { primaryColor, secondaryColor, lightText, darkText } from "./variables";
+import {
+  primaryColor,
+  secondaryColor,
+  lightText,
+  darkText,
+  backgroundDefault
+} from "./variables";
 import logoUrl from "../../assets/images/logo_24.svg";
 
 export const StyledHeader = styled.header`
@@ -85,7 +91,7 @@ export const StyledContainer = styled.div`
       ? primaryColor
       : backgroundColor === "secondary"
       ? secondaryColor
-      : "transparent"};
+      : backgroundDefault};
 
   display: flex;
 
@@ -95,12 +101,16 @@ export const StyledContainer = styled.div`
 
   width: ${({ widthValue }) => (widthValue ? widthValue : "100%")};
 
+  height: ${({ heightValue }) => heightValue || "fit-content"};
+
   justify-content: ${({ justifyContent }) =>
     justifyContent ? justifyContent : "flex-start"};
 
   padding: ${({ padding }) => padding || "1rem"};
 
   position: relative;
+
+  flex-wrap: wrap;
 
   @media screen and (min-width: 768px) {
     padding: ${({ padding }) => (padding ? 2 * padding : "2rem")};
@@ -114,6 +124,8 @@ export const StyledList = styled.ul`
 
   flex-direction: ${({ containerDirection }) =>
     containerDirection ? containerDirection : "row"};
+
+  flex-wrap: wrap;
 
   gap: ${({ gapValue }) => (gapValue ? gapValue : "0")};
 

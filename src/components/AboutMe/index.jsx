@@ -7,7 +7,7 @@ export function AboutMe() {
       gapValue="1rem"
       widthValue={() => (window.innerWidth >= 768 ? "60vw" : "100%")}
     >
-      <StyledSubtitle>Sobre Mim</StyledSubtitle>
+      <StyledSubtitle id="sobre">Sobre Mim</StyledSubtitle>
       <StyledParagraph>
         Apaixonado por tecnologia e todo seu potencial de transformação. Fiz
         minha transição de carreira de Engenheiro Civil para Desenvolvedor de

@@ -6,14 +6,14 @@ export function TopMenu() {
     <StyledHeader>
       <StyledNav>
         <li className="logo">
-          <a href="#">Vinicius Bastos</a>
+          <a href="#overview">Vinicius Bastos</a>
         </li>
         <span>
           <li>
-            <a href="#">Sobre mim</a>
+            <a href="#sobre">Sobre mim</a>
           </li>
           <li>
-            <a href="#">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
             <a href="#">Hobbies</a>

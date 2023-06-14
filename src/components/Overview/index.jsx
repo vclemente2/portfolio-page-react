@@ -21,6 +21,7 @@ const StyledImg = styled.img`
 export function Overview() {
   return (
     <StyledContainer
+      id="overview"
       backgroundColor="primary"
       containerDirection={() =>
         window.innerWidth >= 768 ? "row" : "column-reverse"
@@ -29,7 +30,7 @@ export function Overview() {
       align={() => (window.innerWidth >= 768 ? "center" : "flex-start")}
     >
       <StyledContainer
-        backgroundColor="transparent"
+        backgroundColor="primary"
         containerDirection="column"
         gapValue="1rem"
         padding="0px"
